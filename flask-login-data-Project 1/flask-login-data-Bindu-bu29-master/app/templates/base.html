@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <menu class="primary_nav">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+
+        {% if session['admin'] == "True" %}
+            <li><a href="{{ url_for('show_contacts') }}">Show Contacts</a></li>
+
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+
+
+    </menu>
+</header>
+<div id="flash_messages">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</div>
+    {% block main %}
+    {% endblock %}
+
+<footer>
+    &copy; Copyright 2022 by <a href="{{ url_for('index') }}">Bindu Sri Si</a>.
+</footer>
+</body>
+
+</html>

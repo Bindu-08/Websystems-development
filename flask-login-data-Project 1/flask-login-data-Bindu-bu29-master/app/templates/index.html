@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main class="z_layout">
+        <h1>Let's get connected</h1>
+        <div id="contact_form">
+            <form method="get" action="{{ url_for('contact') }}">
+                <input type="submit" value="Contact Me"/>
+            </form>
+        </div>
+    </main>
+{% endblock %}

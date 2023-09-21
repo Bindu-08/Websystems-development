@@ -1,0 +1,102 @@
+/* CSS Layout Code using flexbox */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    align-items:center;
+    justify-content: left;
+}
+
+main {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+.z_layout {
+    background-color: #e0f7fa;
+    align-items:center;
+    justify-content: center;
+}
+.f_layout {
+    flex-direction: row;
+}
+.column_1 {
+    width: 75%;
+    height: 100vh;
+}
+.column_2 {
+    width: 25%;
+}
+footer {
+    height: 10vh;
+    display: flex;
+    margin: auto;
+    align-items:center;
+    justify-content:center;
+}
+#flash_messages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+#contact_form, #flash_messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label {
+    font-weight: bolder;
+    font-size: large;
+}
+input[type=text], input[type=email], input[type=password] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  width: 20vw;
+  margin: 2vh 0;
+  border-radius:10px;
+}
+input[type=submit] {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:10px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:100%;
+
+}
+/* This is styling the primary nav */
+.primary_nav a:link, .primary_nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+.primary_nav a:hover {
+    text-decoration: underline;
+}
+.primary_nav a:active {
+    color: red;
+}
+.primary_nav  li {
+    display: inline;
+}
+.primary_nav {
+    padding: 0px;
+    margin: 0px;
+}
